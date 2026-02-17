@@ -53,3 +53,6 @@ Expectancy [%]                         0.0441
 SQN                                    6.8005
 Kelly Criterion [%]                   23.9275
 ```
+- [output_stats.html](https://alex-shur.github.io/RoboBuilding/R1_LinearRegression/output_stats.html) - quantstats like strategy report
+
+![chart1](https://raw.githubusercontent.com/Alex-Shur/RoboBuilding/master/Stocks/R1_LinearRegression/scr1.png)
