@@ -1,6 +1,21 @@
 # RoboBuilding
 Примеры торговых стратегий - Samples of algotrading strategies
 
+# Гтовые данные 30мин свечек для тестирования
+[DATA.zip](https://drive.google.com/file/d/1kzSEoLYyxrRTQBSAUN2Y8u3FhcbQlewH/view?usp=sharing)
+Также данные можно скачать самостоятельно с помощью [MOEX-Downloader](https://github.com/Alex-Shur/moex-downloader)
+Вам нужны 30мин свечки для следующих тикеров:
+```
+AFKS,  AFLT,  ALRS,  BSPB,  CHMF, 
+FEES,  GAZP,  GMKN,  HYDR,  IRAO, 
+LKOH,  MAGN,  MGNT,  MOEX,  MTLR, 
+MTSS,  NLMK,  NVTK,  PHOR,  PIKK, 
+PLZL,  ROSN,  RTKM,  RUAL,  SBERP,
+SBER,  SIBN,  SNGSP, SNGS,  TATNP, 
+TATN,  TRNFP, UPRO,  VTBR
+```
+Всего 34 акции, за период с 01.01.2015 по 24.12.2025
+
 
 ```
 Strategy                  R1_LinearRegression
