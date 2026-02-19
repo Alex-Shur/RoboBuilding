@@ -142,13 +142,6 @@ class R1_LinearRegression(bt.Strategy):
 
         self.order = None
 
-    # def notify_trade(self, trade):
-    #     """Notification of trade closed"""
-    #     if not trade.isclosed:
-    #         return
-    #     # self.log(f'OPERATION PROFIT, GROSS: {trade.pnl:.2f}, NET: {trade.pnlcomm:.2f}')
-    #     pass
-    
     def notify_data(self, data, status, *args, **kwargs):
         """Notification of data status changes (e.g. new bar, end of data)"""
         # self.log(f'Data {data._name} status = {data._getstatusname()}')
