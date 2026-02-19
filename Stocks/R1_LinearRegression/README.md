@@ -22,6 +22,30 @@ pip install uv
 uv sync
 ```
 
+### Файлы проекта
+- R1_LinearRegression.py - торговая стратегия
+- indicators.py - доп индикаторы используемые в стратегии
+- R_common.py - общие параметры и список торгуемых тикеров акций
+- R1_test.py - запуск стратегии на тестовых данных
+- R1_live.py - запуск торговли с подключением к Demo Quik
+- R1_optimize.py - запуск оптимизатора на тестовых данных
+
+### Готовые данные 30мин свечек для тестирования
+- [DATA.zip](https://drive.google.com/file/d/1kzSEoLYyxrRTQBSAUN2Y8u3FhcbQlewH/view?usp=sharing)
+- Также данные можно скачать самостоятельно с помощью [MOEX-Downloader](https://github.com/Alex-Shur/moex-downloader)
+- Вам нужны 30мин свечки для следующих тикеров:
+```
+AFKS,  AFLT,  ALRS,  BSPB,  CHMF, 
+FEES,  GAZP,  GMKN,  HYDR,  IRAO, 
+LKOH,  MAGN,  MGNT,  MOEX,  MTLR, 
+MTSS,  NLMK,  NVTK,  PHOR,  PIKK, 
+PLZL,  ROSN,  RTKM,  RUAL,  SBERP,
+SBER,  SIBN,  SNGSP, SNGS,  TATNP, 
+TATN,  TRNFP, UPRO,  VTBR
+```
+Всего 34 акции, за период с 01.01.2015 по 24.12.2025
+
+
 ### Запуск примеров
 **В примерах у стратегии УЖЕ введены оптимальные параметры**
 
@@ -41,25 +65,6 @@ R1_live.py  - запуск стратегии в реальную торговл
 uv run R1_live.py
 ```
 
-### Файлы проекта
-- R1_LinearRegression.py - торговая стратегия
-- indicators.py - доп индикаторы используемые в стратегии
-- R_common.py - общие параметры и список торгуемых тикеров акций
-
-### Готовые данные 30мин свечек для тестирования
-- [DATA.zip](https://drive.google.com/file/d/1kzSEoLYyxrRTQBSAUN2Y8u3FhcbQlewH/view?usp=sharing)
-- Также данные можно скачать самостоятельно с помощью [MOEX-Downloader](https://github.com/Alex-Shur/moex-downloader)
-- Вам нужны 30мин свечки для следующих тикеров:
-```
-AFKS,  AFLT,  ALRS,  BSPB,  CHMF, 
-FEES,  GAZP,  GMKN,  HYDR,  IRAO, 
-LKOH,  MAGN,  MGNT,  MOEX,  MTLR, 
-MTSS,  NLMK,  NVTK,  PHOR,  PIKK, 
-PLZL,  ROSN,  RTKM,  RUAL,  SBERP,
-SBER,  SIBN,  SNGSP, SNGS,  TATNP, 
-TATN,  TRNFP, UPRO,  VTBR
-```
-Всего 34 акции, за период с 01.01.2015 по 24.12.2025
 
 
 ### Статистика результатов торговой стратегии
