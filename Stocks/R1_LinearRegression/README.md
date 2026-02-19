@@ -1,7 +1,52 @@
-# RoboBuilding
-Примеры торговых стратегий - Samples of algotrading strategies
+# Канал Линейной Регрессии на скринерах c фильтрацией по группам волатильности
+Примеры торговой стратегии на идее из **OS Engine AlgoStart1LinearRegression**
 
-# Готовые данные 30мин свечек для тестирования
+### Установка и настройка
+
+#### Способ 1: Установка python менеджера UV через встроенный скрипт
+```bash
+# На Linux/macOS
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# На Windows (PowerShell)
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+#### Способ 2: Установка UV через pip
+```bash
+pip install uv
+```
+
+#### Инициализация проекта
+```bash
+uv sync
+```
+
+### Запуск примеров
+**В примерах у стратегии УЖЕ введены оптимальные параметры**
+
+R1_test.py  - запуск стратегии на тестовых данных из папки DATA
+```bash
+uv run R1_test.py
+```
+
+R1_optimize.py  - пример запуска оптимизатора пареметров стратегии на тестовых данных из папки DATA
+```bash
+uv run R1_test.py
+```
+NOTE: Данный оптимизатор проходит по всем комбинациям параметров, комбинаций очен много, поэтому работать будет очень долго, даже в многопотоке
+
+R1_live.py  - запуск стратегии в реальную торговлю, в примере показано как подключиться к Demo Quik. Подробнее о подключениях [bn_quik](https://github.com/Alex-Shur/bn_quik) 
+```bash
+uv run R1_live.py
+```
+
+### Файлы проекта
+- R1_LinearRegression.py - торговая стратегия
+- indicators.py - доп индикаторы используемые в стратегии
+- R_common.py - общие параметры и список торгуемых тикеров акций
+
+### Готовые данные 30мин свечек для тестирования
 - [DATA.zip](https://drive.google.com/file/d/1kzSEoLYyxrRTQBSAUN2Y8u3FhcbQlewH/view?usp=sharing)
 - Также данные можно скачать самостоятельно с помощью [MOEX-Downloader](https://github.com/Alex-Shur/moex-downloader)
 - Вам нужны 30мин свечки для следующих тикеров:
@@ -16,6 +61,8 @@ TATN,  TRNFP, UPRO,  VTBR
 ```
 Всего 34 акции, за период с 01.01.2015 по 24.12.2025
 
+
+### Статистика результатов торговой стратегии
 
 ```
 Strategy                  R1_LinearRegression
