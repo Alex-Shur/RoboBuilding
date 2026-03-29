@@ -10,8 +10,8 @@ import pandas as pd
 import backtrader_next as bt
 
 from backtrader_next.feeds.pandafeed import PandasData
-from R2_Soldiers import R2_Soldiers
-from R_common import stock_names
+from R3_PriceChannel import R3_PriceChannel
+from R_common import Stocks
 
 
 if __name__ == '__main__':
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     cerebro.broker.setcommission(commission=0.0004, leverage=5) # 0.04% per trade
 
 
-    for name in stock_names:
+    for name in Stocks.names:
         df = pd.read_csv(f"./DATA/{name}_M30.csv.zip", sep=";",  parse_dates=["Datetime"], index_col=0)
         df.index.name = 'Datetime'
         data = PandasData(dataframe=df, timeframe=bt.TimeFrame.Minutes, compression=30, fromdate=datetime.date(2015,1,1))
@@ -36,17 +36,16 @@ if __name__ == '__main__':
 
     # Add strategy
     cerebro.addstrategy(
-        R2_Soldiers,
+        R3_PriceChannel,
+        tickets=Stocks,
+        pc_adx_length=50,
+        pc_ratio=840,
         sma_filter=True,
-        sma_period=150,
+        sma_period=70,
         volume_pct=10,
         max_positions=10,
-        volatility_cluster=3,
-        cluster_lookback=80,
-        days_volatility_adaptive=7,
-        height_soldiers_vola_percent=80,
-        proc_height_take=185,
-        proc_height_stop=106,
+        volatility_cluster=2,
+        cluster_lookback=100,
         printlog=False
     )
 
@@ -57,5 +56,6 @@ if __name__ == '__main__':
 
     # Plot results
     # cerebro.old_plot(style='candle')
+
     cerebro.plot(filename="output_charts.html")
     cerebro.show_report(filename="output_stats.html")
