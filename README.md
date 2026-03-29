@@ -5,3 +5,6 @@
 
 - Три Солдата на скринерах c фильтрацией по группам волатильности
   [R2_Soldiers](https://github.com/Alex-Shur/RoboBuilding/tree/main/Stocks/R2_Soldiers)
+
+- Стратегия "Адаптивный Ценовой Канал" с фильтром по волатильности
+  [R3_PriceChannel](https://github.com/Alex-Shur/RoboBuilding/tree/main/Stocks/R3_PriceChannel)
