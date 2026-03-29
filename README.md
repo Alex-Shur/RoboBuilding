@@ -1,5 +1,5 @@
 # RoboBuilding
-Примеры торговых стратегий - Samples of algotrading strategies
+Примеры торговых стратегий на Python - Samples of algotrading strategies on Python
 - Канал Линейной Регрессии на скринерах c фильтрацией по группам волатильности
   [R1_LinearRegression](https://github.com/Alex-Shur/RoboBuilding/tree/main/Stocks/R1_LinearRegression)
 
